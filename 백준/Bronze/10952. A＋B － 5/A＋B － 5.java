@@ -6,11 +6,12 @@ import java.util.StringTokenizer;
 class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int a, b;
 		while (true) {
 			String str = br.readLine();
 			StringTokenizer st = new StringTokenizer(str, " ");
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
+			a = Integer.parseInt(st.nextToken());
+			b = Integer.parseInt(st.nextToken());
 			if (a == 0 && b == 0) {
 				break;
 			}
