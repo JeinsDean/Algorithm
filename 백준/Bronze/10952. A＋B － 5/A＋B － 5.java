@@ -7,7 +7,7 @@ class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int a, b;
-		do {
+		while (true) {
 			String str = br.readLine();
 			StringTokenizer st = new StringTokenizer(str, " ");
 			a = Integer.parseInt(st.nextToken());
@@ -16,7 +16,7 @@ class Main {
 				break;
 			}
 			System.out.println(a + b);
-		} while (a != 0 && b != 0);
+		}
 		br.close();
 	}
 }
