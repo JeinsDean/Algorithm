@@ -7,9 +7,8 @@ class Main {
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
                 String str = br.readLine();
                 int idx = Integer.parseInt(br.readLine());
-
                 br.close();
-                char[] chr = str.toCharArray();
-                System.out.println(chr[idx - 1]);
+
+                System.out.println(str.charAt(idx - 1));
         }
 }
