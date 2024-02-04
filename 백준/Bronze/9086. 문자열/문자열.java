@@ -9,7 +9,7 @@ class Main {
 
                 for (int i = 0; i < cnt; i++) {
                         String str = br.readLine();
-                        System.out.println(str.charAt(0) + "" + str.charAt(str.length() - 1));
+                        System.out.println(str.substring(0, 1) + str.substring(str.length()-1, str.length()));
                 }
                 br.close();
         }
