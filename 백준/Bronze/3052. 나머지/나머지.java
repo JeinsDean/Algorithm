@@ -1,18 +1,19 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashSet;
- 
+import java.util.Set;
+
 public class Main {
- 
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		HashSet<Integer> h = new HashSet<Integer>();
- 
-		for (int i = 0; i < 10; i++) {
-			h.add(in.nextInt() % 42);
-		//입력받은 값의 나머지 값을 add메소드를 통해 HashSet에 저장
-		}
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Set<Integer> set = new HashSet<Integer>();
+
+        for(int i = 0; i < 10; i++) {
+            int num = Integer.parseInt(br.readLine()) % 42;
+            set.add(num);
+        }
         
-		in.close();
-		System.out.print(h.size());
-	}
+        System.out.println(set.size());
+    }
 }
