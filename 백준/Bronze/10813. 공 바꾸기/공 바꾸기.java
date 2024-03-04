@@ -1,29 +1,31 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        StringTokenizer st = new StringTokenizer(str, " ");
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
 
-        int N = sc.nextInt();
-        int M = sc.nextInt();
-
-        int[] arr = new int[N];
-
-        for (int i = 0; i < N; i++) {
-            arr[i] = i+1;
+        int arr[] = new int[n];
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
         }
-
-        for (int i = 0; i < M; i++) {
-            int tmp;
-            int F = sc.nextInt();
-            int E = sc.nextInt();
-
-            tmp = arr[F-1];
-            arr[F-1] = arr[E-1];
-            arr[E-1] = tmp;
+        for(int x = 0; x < m; x++) {
+            String tmp = br.readLine();
+            st = new StringTokenizer(tmp);
+            int i = Integer.parseInt(st.nextToken());
+            int j = Integer.parseInt(st.nextToken());
+            int num = arr[i - 1];
+            arr[i - 1] = arr[j - 1];
+            arr[j - 1] = num;
         }
-        sc.close();
-
-        for (int baguni : arr)
-            System.out.print(baguni + " ");
+        for (int i : arr) {
+            System.out.printf(i + " ");
+        }
     }
 }
