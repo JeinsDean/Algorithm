@@ -11,10 +11,6 @@ public class Main {
         int b = Integer.parseInt(new StringBuffer(st.nextToken()).reverse().toString());
         br.close();
 
-        if(a > b) {
-            System.out.println(a);
-        } else {            
-            System.out.println(b);
-        }
+        System.out.println(Math.max(a, b));
     }
 }
