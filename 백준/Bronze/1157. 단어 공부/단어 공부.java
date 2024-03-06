@@ -20,11 +20,9 @@ public class Main {
             int tmp = str.length() - str.replace(c.toString(), "").length();
             if(cnt == tmp) {
                 ans = "?";
-            } else {
-                if(cnt < tmp) {
-                    cnt = tmp;
-                    ans = c.toString();    
-                }
+            } else if(cnt < tmp) {
+                cnt = tmp;
+                ans = c.toString();    
             }
         }
         System.out.println(ans);        
