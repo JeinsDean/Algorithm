@@ -8,17 +8,13 @@ class Main {
         int N = Integer.parseInt(br.readLine());
 
         System.out.println(factorial(N));
-
     }
 
-    static long factorial(int num) {
-        long result = 1;
-
-        while (num > 0) {
-            result *= num;
-            num--;
+    private static long factorial(int n) {
+        if (n == 0) {
+            return 1;
         }
 
-        return result;
+        return n * factorial(n - 1);
     }
 }
