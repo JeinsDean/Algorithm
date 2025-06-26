@@ -1,16 +1,16 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-		//String[] line = br.readLine().split(" ");
-		br.close();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		System.out.println(Long.parseLong(st.nextToken()) + Long.parseLong(st.nextToken()) + Long.parseLong(st.nextToken()));
-//		System.out.println(Long.parseLong(line[0]) + Long.parseLong(line[1]) + Long.parseLong(line[2]));
-	}
+        String[] input = br.readLine().split(" ");
+        long a = Long.parseLong(input[0]);
+        long b = Long.parseLong(input[1]);
+        long c = Long.parseLong(input[2]);
+        br.close();
+        System.out.println(a + b + c);
+    }
 }
